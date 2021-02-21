@@ -1,0 +1,11 @@
+body {
+    align-content: center;
+}
+
+#mapid {
+    align-content: center;
+    height: 600px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
