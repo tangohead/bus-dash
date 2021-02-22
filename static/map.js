@@ -1,5 +1,5 @@
 var map = L.map('mapid').setView([51.751, -1.257], 13);
-var json_url = "http://46.101.5.120:8081/scox.json"
+var json_url = "https://buses-dash-app.s3.eu-west-2.amazonaws.com/current_bus_locations.json"
 var bus_icon = L.icon({
     iconUrl: 'static/bus-icon.png',
     iconSize: [15,15]
