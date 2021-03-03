@@ -6,20 +6,22 @@ var bus_icon = L.icon({
 });
 
 $.getJSON(json_url, function(data){
-    console.log(data);
-    for(i = 0; i < data.length; i++) {
+    
+    bus_data = data.data;
+
+    for(i = 0; i < bus_data.length; i++) {
 
         L.marker(
-            [data[i].vehicle_lat, data[i].vehicle_lon],
+            [bus_data[i].vehicle_lat, bus_data[i].vehicle_lon],
             {icon: bus_icon}
         ).addTo(map).bindPopup(
-            "Line: " + data[i].line_name + "<br>" 
-            + "Origin: " + data[i].origin_name + "<br>"
-            + "Dest: " + data[i].destination_name + "<br>"
-            + "Last update: " + data[i].timestamp
+            "Line: " + bus_data[i].line_name + "<br>" 
+            + "Origin: " + bus_data[i].origin_name + "<br>"
+            + "Dest: " + bus_data[i].destination_name + "<br>"
+            + "Last update: " + bus_data[i].timestamp
         );
     }
-    //$('#bus-status').text(`Updated at`)
+    $('#bus-status').text(`Updated at ${bus.timestamp}`)
 });
 
 
