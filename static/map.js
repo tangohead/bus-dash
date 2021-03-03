@@ -21,7 +21,7 @@ $.getJSON(json_url, function(data){
             + "Last update: " + bus_data[i].timestamp
         );
     }
-    $('#bus-status').text(`Updated at ${bus_data.timestamp}`)
+    $('#bus-status').text(`Updated at ${data.timestamp}`)
 });
 
 
