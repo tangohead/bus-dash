@@ -3,9 +3,16 @@ body {
 }
 
 #mapid {
-    align-content: center;
     height: 600px;
     width: 800px;
+}
+
+.pagecontent {
+    align-content: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+.textcontent {
+    width: 800px;
 }
